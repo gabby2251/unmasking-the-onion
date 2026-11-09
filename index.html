@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unmasking the Onion: How Tor Crime Is Investigated</title>
+  <meta name="description" content="An interactive look at how investigators identified people using Tor, and which network layer gave them away.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/nav.js" defer></script>
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <h1 id="hero-title">Tor hides the content. People leave traces anyway.</h1>
+        <p class="lede">Investigators have identified people using Tor without breaking its encryption. This site walks through how, one network layer at a time.</p>
+        <div class="actions">
+          <a class="button" href="quiz.html?mode=pre">Start with a 10-question quiz</a>
+          <a class="button secondary" href="tor.html">Skip to Module 1</a>
+        </div>
+      </div>
+
+      <ol class="stack" aria-label="Where real cases leaked, by TCP/IP layer">
+        <li class="app">
+          <span class="name">Application</span>
+          <p class="trace"><span class="tag">Silk Road</span>A reused forum name next to a Gmail address</p>
+        </li>
+        <li class="transport">
+          <span class="name">Transport</span>
+          <p class="trace"><span class="tag">Relay early</span>A hidden signal inside Tor’s own cells</p>
+        </li>
+        <li class="internet">
+          <span class="name">Internet</span>
+          <p class="trace"><span class="tag">Playpen</span>A server that sent email outside Tor</p>
+        </li>
+        <li class="access">
+          <span class="name">Network access</span>
+          <p class="trace"><span class="tag">Harvard</span>A campus Wi-Fi log showing who used Tor</p>
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="modules-title">
+      <h2 id="modules-title">Four modules, about 45 minutes</h2>
+      <ol class="modules">
+        <li>
+          <h3><a href="tor.html">1. How Tor works</a></h3>
+          <p>Follow a request through guard, middle, and exit relays, then see what each one can and can’t see.</p>
+        </li>
+        <li>
+          <h3><a href="cases.html">2. Case files</a></h3>
+          <p>Four real investigations as evidence boards. Decide for yourself whether Tor was actually broken.</p>
+        </li>
+        <li>
+          <h3><a href="lab.html">3. Correlation lab</a></h3>
+          <p>Play the attacker. Match traffic going into Tor with traffic coming out, then add defenses.</p>
+        </li>
+        <li>
+          <h3><a href="profile.html">4. Profile the suspect</a></h3>
+          <p>Work two fictional evidence lockers and find the layer that leaked.</p>
+        </li>
+      </ol>
+    </section>
+
+    <aside class="callout" aria-label="Before you start">
+      <p><strong>Before you start:</strong> you should know the four TCP/IP layers, what an IP address is, and roughly how encryption works. Tor terms are explained the first time they appear, and every one is in the <a href="glossary.html">glossary</a>.</p>
+    </aside>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>
